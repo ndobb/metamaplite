@@ -3,7 +3,8 @@
 # A simplified metamaplite bash script using metamaplite standalone
 # jar, should work on MINGW bash (and GIT bash) on Windows.
 # 
-PROJECTDIR=$(dirname $0)
+
+PROJECTDIR=/Users/nicdobbins/work/nlp/metamaplite
 
 MML_VERSION=3.6.2rc5
 
@@ -19,8 +20,10 @@ MMLPROPS="-Dopennlp.en-sent.bin.path=$OPENNLP_MODELS/en-sent.bin \
     -Dopennlp.en-chunker.bin.path=$OPENNLP_MODELS/en-chunker.bin \
     -Dlog4j.configurationFile=$PROJECTDIR/config/log4j2.xml \
     -Dmetamaplite.entitylookup.resultlength=1500 \
-    -Dmetamaplite.index.directory=$PROJECTDIR/data/ivf/2019AB/USAbase \
+    -Dmetamaplite.index.directory=$PROJECTDIR/data/ivf/@@year@@/@@subset@@ \
     -Dmetamaplite.excluded.termsfile=$PROJECTDIR/data/specialterms.txt"
+
+MML_CLASSPATH=$PROJECTDIR/target/classes:$PROJECTDIR/build/classes:$PROJECTDIR/classes:$PROJECTDIR:$MML_JAR
 
 MML_JAR=$PROJECTDIR/target/metamaplite-${MML_VERSION}-standalone.jar
 MML_CLASSPATH=$PROJECTDIR/target/classes:$PROJECTDIR/build/classes:$PROJECTDIR/classes:$PROJECTDIR:$MML_JAR

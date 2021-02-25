@@ -1,0 +1,364 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BioCPipeLineExample<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.BioCPipeLineExample",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DirectLookup<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.DirectLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DirectLookupTermFile<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.DirectLookupTermFile",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-EntityLookup5Client<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.EntityLookup5Client",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.Example",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example2<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.Example2",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example3<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.Example3",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ListAcronyms<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.ListAcronyms",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StreamPassageSentences<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.StreamPassageSentences",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingFindLongestMatch<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.UsingFindLongestMatch",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingResultFormatter<metamaplite>",
+            "request": "launch",
+            "mainClass": "examples.UsingResultFormatter",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SectionIndicatorData<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.clinical.SectionIndicatorData",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuildIndex<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.BuildIndex",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CreateIndexes<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.CreateIndexes",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CreateVarsIndexes<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.CreateVarsIndexes",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractMrconsoPreferredNames<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.ExtractMrconsoPreferredNames",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractMrconsoSources<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.ExtractMrconsoSources",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractMrstySemanticTypes<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.ExtractMrstySemanticTypes",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractTreecodes<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.ExtractTreecodes",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GenerateVariants<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.GenerateVariants",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GleanMrconso<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.GleanMrconso",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImportTable<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.ImportTable",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IndexLookup<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.dfbuilder.IndexLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SemEvalDocument<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.document.SemEvalDocument",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BioCPipeline<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.BioCPipeline",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BioCProcess<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.BioCProcess",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.Main",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NegEx<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.NegEx",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Pipeline<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.Pipeline",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SimplePipeline<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.SimplePipeline",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuildDictionaries<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.mapdb.BuildDictionaries",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MapDbLookup<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.metamap.lite.mapdb.MapDbLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MetaMapLite<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.ner.MetaMapLite",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Lex<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.nlp.nlsstrings.Lex",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MWIUtilities<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.nlp.nlsstrings.MWIUtilities",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MetamapTokenization<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.nlp.nlsstrings.MetamapTokenization",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NLSStrings<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.nlp.nlsstrings.NLSStrings",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Masking<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.tools.Masking",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TokenBasedReferenceTrieTest<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.tools.TokenBasedReferenceTrieTest",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TokenBasedTrieTest<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.tools.TokenBasedTrieTest",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TokenTrieNERTest<metamaplite>",
+            "request": "launch",
+            "mainClass": "gov.nih.nlm.nls.trie_ner.TokenTrieNERTest",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Install<metamaplite>",
+            "request": "launch",
+            "mainClass": "install.Install",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuildIndex<metamaplite>(1)",
+            "request": "launch",
+            "mainClass": "irutils.BuildIndex",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IndexLookup<metamaplite>(1)",
+            "request": "launch",
+            "mainClass": "irutils.IndexLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MappedMultiKeyIndexDiskBasedGeneration<metamaplite>",
+            "request": "launch",
+            "mainClass": "irutils.MappedMultiKeyIndexDiskBasedGeneration",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MappedMultiKeyIndexGeneration<metamaplite>",
+            "request": "launch",
+            "mainClass": "irutils.MappedMultiKeyIndexGeneration",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MappedMultiKeyIndexLookup<metamaplite>",
+            "request": "launch",
+            "mainClass": "irutils.MappedMultiKeyIndexLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MultiKeyIndexGeneration<metamaplite>",
+            "request": "launch",
+            "mainClass": "irutils.MultiKeyIndexGeneration",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MultiKeyIndexLookup<metamaplite>",
+            "request": "launch",
+            "mainClass": "irutils.MultiKeyIndexLookup",
+            "projectName": "metamaplite"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringUtils<metamaplite>",
+            "request": "launch",
+            "mainClass": "utils.StringUtils",
+            "projectName": "metamaplite"
+        }
+    ]
+}

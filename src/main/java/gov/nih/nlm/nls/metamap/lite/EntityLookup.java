@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.Set;
 import bioc.BioCAnnotation;
 import bioc.BioCPassage;
+import bioc.BioCSentence;
 import gov.nih.nlm.nls.metamap.lite.types.Entity;
+import gov.nih.nlm.nls.metamap.lite.types.EntityTokenList;
 import gov.nih.nlm.nls.metamap.prefix.ERToken;
 
 /**
@@ -42,4 +44,8 @@ public interface EntityLookup {
 			      Set<String> semTypeRestrictSet,
 			      Set<String> sourceRestrictSet);
   Set<BioCAnnotation> generateBioCEntitySet(String docid, List<ERToken> tokenList);
+
+  EntityTokenList processSimpleSentence(String docid, BioCSentence sentence,
+                Set<String> semTypeRestrictSet,
+                Set<String> sourceRestrictSet);
 }

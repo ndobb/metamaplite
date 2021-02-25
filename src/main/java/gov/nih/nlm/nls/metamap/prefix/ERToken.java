@@ -13,6 +13,7 @@ public interface ERToken extends Token, PosToken, ClassifiedToken
 {
   String getPartOfSpeech();  
   List<Entity> getEntityList();
+  int getIndex();
   void addEntity(Entity entity);
   void setPartOfSpeech(String partOfSpeech);  
 }

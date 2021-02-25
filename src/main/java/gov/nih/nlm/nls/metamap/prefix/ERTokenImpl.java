@@ -21,6 +21,13 @@ public class ERTokenImpl extends PosTokenImpl implements Token, PosToken, Classi
     this.partOfSpeech = "";
   }
 
+  public ERTokenImpl(String tokenText, int offset, String tokenClass, int index) {
+    super(tokenText, offset);
+    this.tokenClass = tokenClass;
+    this.index = index;
+    this.partOfSpeech = "";
+  }
+
   public ERTokenImpl(String tokenText, int offset, String tokenClass, String partOfSpeech) {
     super(tokenText, offset);
     this.tokenClass = tokenClass;
@@ -47,6 +54,11 @@ public class ERTokenImpl extends PosTokenImpl implements Token, PosToken, Classi
   @Override
   public List<Entity> getEntityList() {
     return this.entityList;
+  }
+
+  @Override 
+  public int getIndex() {
+      return this.index;
   }
 
   public void setEntityList(List<Entity> entityList) {
