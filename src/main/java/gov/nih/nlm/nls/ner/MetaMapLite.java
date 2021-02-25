@@ -730,10 +730,56 @@ public class MetaMapLite {
             properties.setProperty("metamaplite.ivf.meshtcrelaxedindex", indexDirName + "/indices/meshtcrelaxed");
         }
     }
+<<<<<<< HEAD
 
     public static void expandIndexDir(Properties properties) {
         String indexDirName = properties.getProperty("metamaplite.index.directory");
         expandIndexDir(properties, indexDirName);
+=======
+    return infos;
+  }
+
+  /** Document abbreviation information class */
+  public class DocInfo {
+    /** document id */
+    String id;
+    /** list of abbreviation information instances */
+    List <AbbrInfo> infolist;
+    public DocInfo(String id, List <AbbrInfo> infos) {
+      this.id = id;
+      this.infolist = infos;
+    }
+    public String getId() { return this.id; }
+    public List<AbbrInfo> getInfolist() { return this.infolist; }
+  }
+
+  public List<DocInfo> getDocAcronymList(List<BioCDocument> documentList) {
+    List <DocInfo> docInfoList = new ArrayList<DocInfo>();
+    for (BioCDocument document: documentList) {
+      List <AbbrInfo> infos = new ArrayList<AbbrInfo>();
+      for (BioCPassage passage: document.getPassages()) {
+	// for (Sentence sentence: this.sentenceExtractor.createSentenceList(passage.getText())) {
+	for (AbbrInfo abbrInfo: extractAbbr.extractAbbrPairsString(passage.getText())) {
+	  infos.add(new AbbrInfo(abbrInfo.shortForm.replace("\n", " "), abbrInfo.shortFormIndex,
+				 abbrInfo.longForm.replace("\n", " "), abbrInfo.longFormIndex));
+	}
+	//}
+      }
+      docInfoList.add(new DocInfo(document.getID(), infos));
+    }
+    return docInfoList;
+  }
+
+  public static List<String> loadInputFileList(String inputfileListFileName)
+    throws FileNotFoundException, IOException
+  {
+    List<String> inputFileList = new ArrayList<String>();
+    BufferedReader br = 
+      new BufferedReader(new FileReader(inputfileListFileName));
+    String line;
+    while ((line = br.readLine()) != null) {
+      inputFileList.add(line.trim());
+>>>>>>> 8aae39319a4a4b40a013180bf6cde09b172c78a8
     }
 
     public static void displayProperties(String label, Properties properties) {
@@ -887,6 +933,7 @@ public class MetaMapLite {
         pw.flush();
     }
 
+<<<<<<< HEAD
     void listAcronyms(List<BioCDocument> documentList) {
         PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out, Charset.forName("utf-8")));
         for (AbbrInfo acronym : this.getAcronymList(documentList)) {
@@ -894,6 +941,22 @@ public class MetaMapLite {
                     + acronym.longFormIndex);
         }
         pw.flush();
+=======
+    // check filesystem 
+    File localConfigurationFile = new File(propertiesFilename);
+    if (localConfigurationFile.exists()) {
+      logger.info("loading local configuration from " + localConfigurationFile);
+      if (verbose) {
+	System.out.println("loading local configuration from " + localConfigurationFile);
+      }
+      FileReader fr = new FileReader(localConfigurationFile);
+      localConfiguration.load(fr);
+      fr.close();
+      logger.info("loaded " + localConfiguration.size() + " records from local configuration");
+      if (verbose) {
+	System.out.println("loaded " + localConfiguration.size() + " records from local configuration");
+      }
+>>>>>>> 8aae39319a4a4b40a013180bf6cde09b172c78a8
     }
 
     void listSentencesWithPosTags(List<BioCDocument> documentList) throws IOException {
@@ -917,6 +980,7 @@ public class MetaMapLite {
         listChunks(pw, documentList);
         pw.flush();
     }
+<<<<<<< HEAD
 
     void listEntities(List<BioCDocument> documentList, String outputFormatOption)
             throws IllegalAccessException, InvocationTargetException, IOException, Exception {
@@ -926,6 +990,20 @@ public class MetaMapLite {
         PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out, Charset.forName("utf-8")));
         listEntities(documentList, pw, outputFormatOption);
         pw.flush();
+=======
+    pw.flush();
+  }
+
+  void listAcronyms(List<BioCDocument> documentList) {
+    PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out,
+							    Charset.forName("utf-8")));
+    for (DocInfo docInfo: this.getDocAcronymList(documentList)) {
+      for (AbbrInfo acronym: docInfo.getInfolist()) {
+	pw.println(docInfo.getId() + "|" +
+		   acronym.shortForm + "|" + acronym.shortFormIndex + "|" +
+		   acronym.longForm + "|" + acronym.longFormIndex );
+     }
+>>>>>>> 8aae39319a4a4b40a013180bf6cde09b172c78a8
     }
 
     /**
@@ -997,6 +1075,7 @@ public class MetaMapLite {
         }
         pw.close();
     }
+<<<<<<< HEAD
 
     void listSentencesWithPosTags(String filename, List<BioCDocument> documentList, boolean overwritefile)
             throws IOException {
@@ -1017,6 +1096,27 @@ public class MetaMapLite {
             pw.println();
         }
         pw.close();
+=======
+    pw.close();
+  }
+
+  void listAcronyms(String filename, 
+		    List<BioCDocument> documentList,
+		    boolean overwritefile)
+    throws IOException
+  {
+    String basename = getBasename(filename);
+    String outputFilename = basename + ".acronyms";
+    File outputFile = abortIfFileExists(outputFilename, overwritefile);
+    PrintWriter pw = new PrintWriter(new BufferedWriter
+				     (new FileWriter(outputFile)));
+    for (DocInfo docInfo: this.getDocAcronymList(documentList)) {
+      for (AbbrInfo acronym: docInfo.getInfolist()) {
+	pw.println(docInfo.getId() + "|" +
+		   acronym.shortForm + "|" + acronym.shortFormIndex + "|" +
+		   acronym.longForm + "|" + acronym.longFormIndex );
+      }
+>>>>>>> 8aae39319a4a4b40a013180bf6cde09b172c78a8
     }
 
     void listChunks(PrintWriter pw, List<BioCDocument> documentList) throws IOException {
